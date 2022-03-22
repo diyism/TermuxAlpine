@@ -27,7 +27,7 @@ dpkg -i termux-x11.deb
 #install termux-x11.apk into android and start it and approve permissions
 nano .termux/termux.properties       #uncomment "allow-external-apps true"
 export XDG_RUNTIME_DIR=${TMPDIR}
-termux-x11 :0 &
+termux-x11 :0 &                     #start Xwayland (to replace xorg-server, need no installing xorg-server)
 
 startalpine
 apk update
