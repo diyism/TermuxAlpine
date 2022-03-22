@@ -31,8 +31,8 @@ termux-x11 :0 &
 
 startalpine
 apk update
-apt install xfce4 xorg-server x11vnc git
-startxfce4         #env DISPLAY=:1 xfce4-session
+apk add xfce4 xorg-server x11vnc git
+startxfce4         #env DISPLAY=:0 xfce4-session
 x11vnc -localhost -loop
 git clone --depth 1 https://github.com/novnc/noVNC.git
 ./noVNC/utils/novnc_proxy --vnc localhost:5900 --listen 6081
