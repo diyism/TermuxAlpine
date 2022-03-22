@@ -26,7 +26,7 @@ apk update
 apt install xfce4 xorg-server x11vnc git
 startxfce4
 x11vnc -localhost -loop
-git clone --depth 1 noVNC.git
+git clone --depth 1 https://github.com/novnc/noVNC.git
 ./noVNC/utils/novnc_proxy --vnc localhost:5900 --listen 6081
 ```
 5. For exit just execute
