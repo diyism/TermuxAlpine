@@ -23,6 +23,7 @@ bash TermuxAlpine.sh
 ```
 pkg install x11-repo
 pkg install termux-x11
+nano .termux/termux.properties       #uncomment "allow-external-apps true"
 export XDG_RUNTIME_DIR=${TMPDIR}
 termux-x11 :1 &
 
