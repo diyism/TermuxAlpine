@@ -31,7 +31,7 @@ termux-x11 :0 &                     #start Xwayland (to replace xorg-server, nee
 
 startalpine
 apk update
-apk add xfce4 xorg-server x11vnc git
+apk add xfce4 x11vnc git
 startxfce4         #env DISPLAY=:0 xfce4-session
 x11vnc -localhost -loop
 git clone --depth 1 https://github.com/novnc/noVNC.git
