@@ -15,8 +15,10 @@ This Termux bash setup shell script will attempt to set Alpine Linux up in your 
 2. Get the script
 `curl -LO https://raw.githubusercontent.com/Hax4us/TermuxAlpine/master/TermuxAlpine.sh`
 3. Execute the script
-pkg upgrade               # or else when run TermuxAlpine.sh will report libcrpto.so error
-`bash TermuxAlpine.sh`
+```
+pkg upgrade               # or else when run TermuxAlpine.sh will report libcrypto.so error
+bash TermuxAlpine.sh
+```
 4. Start Alpine
 `startalpine`
 5. For exit just execute
