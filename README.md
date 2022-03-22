@@ -21,10 +21,15 @@ bash TermuxAlpine.sh
 ```
 4. Start Alpine
 ```
+pkg install x11-repo
+pkg install termux-x11
+export XDG_RUNTIME_DIR=${TMPDIR}
+termux-x11 :1 &
+
 startalpine
 apk update
 apt install xfce4 xorg-server x11vnc git
-startxfce4
+startxfce4         #env DISPLAY=:1 xfce4-session
 x11vnc -localhost -loop
 git clone --depth 1 https://github.com/novnc/noVNC.git
 ./noVNC/utils/novnc_proxy --vnc localhost:5900 --listen 6081
