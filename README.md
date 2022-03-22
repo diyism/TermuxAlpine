@@ -24,10 +24,10 @@ bash TermuxAlpine.sh
 pkg install x11-repo termux-x11 dpkg wget
 wget https://github.com/termux/termux-x11/releases/download/1.02.06/termux-x11.deb
 dpkg -i termux-x11.deb
-#install termux-x11.apk into android
+#install termux-x11.apk into android and start it and approve permissions
 nano .termux/termux.properties       #uncomment "allow-external-apps true"
 export XDG_RUNTIME_DIR=${TMPDIR}
-termux-x11 :1 &
+termux-x11 :0 &
 
 startalpine
 apk update
