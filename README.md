@@ -38,9 +38,11 @@ env DISPLAY=:0 startxfce4         #equivalent to "xfce4-session --display=:0"
 `exit`
 
 ## access /sdcard:
+```
 cd ~
 termux-setup-storage
 ls storage
+```
 
 ## _Steps For First Time Use (Recommended)_
 1. Update Alpine
