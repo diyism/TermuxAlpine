@@ -31,10 +31,11 @@ apk update
 apk add xfce4 x11vnc xorg-server-xvfb git
 while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create -gone 'killall Xvfb' -env X11VNC_CREATE_STARTING_DISPLAY_NUMBER=0 -env X11VNC_CREATE_GEOM=2560x1688x16 >/dev/null 2>&1; done &
 #"-create" means creating an xvfb display
-while true; do nohup /data/data/com.termux/files/usr/bin/xfce4-session --display=:0  >/dev/null 2>&1; sleep 8; done &
 #open androidVNC(vnc viewer) app to connecct localhost:5900 or use novnc:
 git clone --depth 1 https://github.com/novnc/noVNC.git
 while true; do nohup /data/data/com.termux/files/home/noVNC/utils/novnc_proxy --vnc localhost:5900 --listen 6081 >/dev/null 2>&1; sleep 1; done &
+#xfce4-seesion need get rid of nohup
+/data/data/com.termux/files/usr/bin/xfce4-session --display=:0 >/dev/null 2>&1
 # visit http://127.0.0.1:6081/vnc.html on android browser
 ```
 5. For exit just execute
