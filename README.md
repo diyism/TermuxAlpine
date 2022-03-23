@@ -31,7 +31,7 @@ bash TermuxAlpine.sh
 startalpine
 export XDG_RUNTIME_DIR=/data/data/com.termux/files/home
 apk update
-apk add xfce4 x11vnc xorg-server xorg-server-xvfb git
+apk add xfce4 x11vnc xorg-server-xvfb git
 x11vnc -loop -create               #"-create" means creating a dummy display
 env DISPLAY=:0 startxfce4         #equivalent to "xfce4-session --display=:0"
 git clone --depth 1 https://github.com/novnc/noVNC.git
