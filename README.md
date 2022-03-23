@@ -28,14 +28,12 @@ bash TermuxAlpine.sh
 #export XDG_RUNTIME_DIR=/data/data/com.termux/files/home
 #termux-x11 :0 >/dev/null &                     #start Xwayland (to replace xorg-server, need no installing xorg-server)
 
-pkg install openssl-tool
-
 startalpine
 export XDG_RUNTIME_DIR=/data/data/com.termux/files/home
 apk update
-apk add xfce4 x11vnc xserver-xorg-video-dummy git
-startxfce4         #env DISPLAY=:0 xfce4-session
-x11vnc -localhost -loop
+apk add xfce4 x11vnc git
+x11vnc -loop -create               #"-create" means creating a dummy display
+startxfce4         #equals to "xfce4-session --display=:0"
 git clone --depth 1 https://github.com/novnc/noVNC.git
 ./noVNC/utils/novnc_proxy --vnc localhost:5900 --listen 6081
 ```
