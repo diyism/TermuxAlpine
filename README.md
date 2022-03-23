@@ -32,8 +32,7 @@ startalpine
 export XDG_RUNTIME_DIR=/data/data/com.termux/files/home
 apk update
 apk add xfce4 x11vnc xorg-server-xvfb
-while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create -gone 'killall Xvfb' >/dev/null 2>&1; done &
--env X11VNC_CREATE_GEOM=${0:-2560x1688x16}
+while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create -gone 'killall Xvfb' -env X11VNC_CREATE_STARTING_DISPLAY_NUMBER=0 -env X11VNC_CREATE_GEOM=${0:-2560x1688x16}>/dev/null 2>&1; done &
 #"-create" means creating an xvfb display
 env DISPLAY=:0 startxfce4         #equivalent to "xfce4-session --display=:0"
 #open androidVNC(vnc viewer) app to connecct localhost:5900
