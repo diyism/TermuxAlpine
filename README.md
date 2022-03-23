@@ -33,7 +33,7 @@ export XDG_RUNTIME_DIR=/data/data/com.termux/files/home
 apk update
 apk add xfce4 x11vnc git
 x11vnc -loop -create               #"-create" means creating a dummy display
-startxfce4         #equals to "xfce4-session --display=:0"
+env DISPLAY=:0 startxfce4         #equivalent to "xfce4-session --display=:0"
 git clone --depth 1 https://github.com/novnc/noVNC.git
 ./noVNC/utils/novnc_proxy --vnc localhost:5900 --listen 6081
 ```
