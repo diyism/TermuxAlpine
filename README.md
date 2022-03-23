@@ -32,7 +32,7 @@ termux-x11 :0 >/dev/null &                     #start Xwayland (to replace xorg-
 startalpine
 export XDG_RUNTIME_DIR=/data/data/com.termux/files/home
 apk update
-apk add xfce4 x11vnc git
+apk add xfce4 x11vnc xserver-xorg-video-dummy git
 startxfce4         #env DISPLAY=:0 xfce4-session
 x11vnc -localhost -loop
 git clone --depth 1 https://github.com/novnc/noVNC.git
