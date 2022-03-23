@@ -34,7 +34,7 @@ apk update
 apk add xfce4 x11vnc xorg-server-xvfb
 while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create >/dev/null 2>&1; done &       #"-create" means creating an xvfb display
 env DISPLAY=:0 startxfce4         #equivalent to "xfce4-session --display=:0"
-#open androidVNC app to connecct localhost:5900
+#open androidVNC(vnc viewer) app to connecct localhost:5900
 ```
 5. For exit just execute
 `exit`
