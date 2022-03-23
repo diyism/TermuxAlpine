@@ -32,7 +32,7 @@ startalpine
 export XDG_RUNTIME_DIR=/data/data/com.termux/files/home
 apk update
 apk add xfce4 x11vnc xorg-server-xvfb git
-while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create >/dev/null 2>&1; done &       #"-create" means creating a dummy display
+while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create >/dev/null 2>&1; done &       #"-create" means creating an xvfb display
 env DISPLAY=:0 startxfce4         #equivalent to "xfce4-session --display=:0"
 git clone --depth 1 https://github.com/novnc/noVNC.git
 ./noVNC/utils/novnc_proxy --vnc localhost:5900 --listen 6081
