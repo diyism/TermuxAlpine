@@ -12,7 +12,7 @@ This Termux bash setup shell script will attempt to set Alpine Linux up in your 
 2. Get the script
 ```
 curl -LO https://raw.githubusercontent.com/diyism/TermuxAlpine/master/TermuxAlpine.sh
-this fork added "\${PREFIX}/share/TermuxAlpine/tmp:/dev/shm" to support booting chrome
+this fork added "\${PREFIX}/share/TermuxAlpine/tmp:/dev/shm" to support booting chromium
 ```
 3. Execute the script
 ```
@@ -35,7 +35,7 @@ cd $XDG_RUNTIME_DIR
 $ source alpine.src
 
 #apk update
-#apk add xfce4 x11vnc xorg-server-xvfb git
+#apk add xfce4 x11vnc xorg-server-xvfb git chromium
 
 while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create -noshm -gone 'killall Xvfb' -env X11VNC_CREATE_STARTING_DISPLAY_NUMBER=0 -env X11VNC_CREATE_GEOM=2560x1688x16 >/dev/null 2>&1; done &
 #"-create" means creating an xvfb display
@@ -59,6 +59,9 @@ while true; do nohup /data/data/com.termux/files/home/noVNC/utils/novnc_proxy --
 #while true; do /usr/bin/xfce4-session --display=:0  >/dev/null 2>&1; sleep 1; done
 #=====for alpine in termux, there is only Xvfb with a must /usr/bin/xinit:
 #echo 'exec xfce4-session' > /data/data/com.termux/files/home/.xinitrc
+
+#start chromium:
+env DISPLAY=:0 /usr/lib/chromium/chromium-lancher.sh --no-sandbox
 
 ```
 5. For exit just execute
