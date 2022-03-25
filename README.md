@@ -46,6 +46,7 @@ while true; do nohup /data/data/com.termux/files/home/noVNC/utils/novnc_proxy --
 #xfce4-seesion need get rid of "nohup" and "&"
 while true; do /data/data/com.termux/files/usr/bin/xfce4-session --display=:0  >/dev/null 2>&1; sleep 1; done
 # visit http://127.0.0.1:6081/vnc.html on android browser
+# it's weird that while clicking the "Connect" button in vnc.html the Termux will occupy 3GB more memory(maybe killed by android system), and 5 seconds later Termux will release all memory.
 
 $ cat x11vnc.sh
 #!/bin/bash
