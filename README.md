@@ -10,7 +10,10 @@ This Termux bash setup shell script will attempt to set Alpine Linux up in your 
 1. First go to home directory
 `cd $HOME`
 2. Get the script
-`curl -LO https://raw.githubusercontent.com/Hax4us/TermuxAlpine/master/TermuxAlpine.sh`
+```
+curl -LO https://raw.githubusercontent.com/diyism/TermuxAlpine/master/TermuxAlpine.sh
+this fork added "\${PREFIX}/share/TermuxAlpine/tmp:/dev/shm" to support booting chrome
+```
 3. Execute the script
 ```
 pkg upgrade               # or else when run TermuxAlpine.sh will report libcrypto.so error
