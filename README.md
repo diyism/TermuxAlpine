@@ -3,8 +3,7 @@
 This Termux bash setup shell script will attempt to set Alpine Linux up in your Termux environment.
 
 ## _Steps For Installation_
-1. First go to home directory
- Download and install from https://github.com/termux/termux-app/releases/
+1. Download and install from https://github.com/termux/termux-app/releases/
  the apk in github only takes 30MB, the apk on f-droid is 100MB, the apk on google play is old/deprecated(lack of left and right arrow keys)
 2. Get the script
 ```
