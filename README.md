@@ -29,7 +29,7 @@ $ source alpine.src
 
 #apk update
 #apk add xfce4 x11vnc xorg-server-xvfb git chromium
-#pkg install fluxbox x11vnc xorg-server-xvfb git python3
+#pkg install x11-repo fluxbox x11vnc xorg-server-xvfb git python3
 #novnc need python3, fluxbox is 20MB(while both xfce4 and lxqt is over 100MB)
 
 while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create -noshm -gone 'killall Xvfb' -env X11VNC_CREATE_STARTING_DISPLAY_NUMBER=0 -env X11VNC_CREATE_GEOM=2560x1688x16 >/dev/null 2>&1; done &
