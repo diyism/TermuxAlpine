@@ -1,8 +1,4 @@
-# TermuxAlpine
-
-#### _powered by_
-
-![powered by Alpine](../master/docs/images/alpinelinux-logo.svg)
+# TermuxXserver
 
 This Termux bash setup shell script will attempt to set Alpine Linux up in your Termux environment.
 
