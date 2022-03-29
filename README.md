@@ -36,7 +36,7 @@ $ source alpine.src
 
 while true; do nohup /usr/bin/x11vnc -noxfixes -usepw -repeat -loop -create -noshm -gone 'killall Xvfb' -env X11VNC_CREATE_STARTING_DISPLAY_NUMBER=0 -env X11VNC_CREATE_GEOM=2560x1688x16 >/dev/null 2>&1; done &
 #"-create" means creating an xvfb display
-#we can use "nwrkbiz/android-xserver" to replace "x11vnc and xorg-server-xvfb", the xServer apk create a display at ":0"
+#and we can use "nwrkbiz/android-xserver" to replace "x11vnc and xorg-server-xvfb", the xServer apk create a display at ":0"
 
 #open androidVNC(vnc viewer) app to connecct localhost:5900 or use novnc:
 #git clone --depth 1 https://github.com/novnc/noVNC.git
