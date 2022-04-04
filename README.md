@@ -8,7 +8,7 @@ This Termux bash setup shell script will attempt to set Alpine Linux up in your 
 2. Get the script
 ```
 `cd $HOME`
-curl -LO https://raw.githubusercontent.com/diyism/TermuxAlpine/master/TermuxAlpine.sh
+curl -LO https://raw.githubusercontent.com/diyism/TermuxXserver/master/TermuxAlpine.sh
 this fork added "\${PREFIX}/share/TermuxAlpine/tmp:/dev/shm" to support booting chromium
 ```
 3. Execute the script
