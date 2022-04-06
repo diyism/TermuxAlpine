@@ -61,6 +61,17 @@ env DISPLAY=:0 /usr/lib/chromium/chromium-lancher.sh --no-sandbox
 5. For exit just execute
 `exit`
 
+## gowebview+xserver:
+```
+#install "nwrkbiz/android-xserver" apk and start it
+startalpine
+apk add gcc-go webkit2gtk-dev
+go get github.com/webview/webview
+export DISPLAY=:0
+go run test.go
+#now I can see the web page in "nwrkbiz/android-xserver" app
+```
+
 ## access /sdcard:
 ```
 cd ~
