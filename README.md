@@ -64,7 +64,7 @@ env DISPLAY=:0 /usr/lib/chromium/chromium-lancher.sh --no-sandbox
 ## gowebview+xserver:
 ```
 #install "nwrkbiz/android-xserver" apk and start it
-pkg install x11-repo golang webkit2gtk xorgproto libcurl
+pkg install x11-repo golang webkit2gtk xorgproto glib-networking
 #startalpine
 #apk add gcc-go webkit2gtk-dev
 go get github.com/webview/webview
