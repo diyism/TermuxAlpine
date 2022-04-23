@@ -78,6 +78,10 @@ go run test.go
 cd ~
 termux-setup-storage
 ls storage
+ls /sdcard
+
+termux-backup /sdcard/termux.pkgs.tar.xz
+#termux-restore /sdcard/termux.pkgs.tar.xz
 ```
 
 ## _Steps For First Time Use (Recommended)_
