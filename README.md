@@ -84,6 +84,24 @@ termux-backup /sdcard/termux.pkgs.tar.xz
 #termux-restore /sdcard/termux.pkgs.tar.xz
 ```
 
+## cloudflared tunnel:
+```
+$ wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64
+$ chmod 777 cloudflared-linux-arm64
+$ ./cloudflared-linux-arm64 tunnel login             #it will auto open android browser from termux
+$ ./cloudflared-linux-arm64 tunnel create www1
+$ ./cloudflared-linux-arm64 tunnel route dns www1 www1.gvgle.com
+$ nano ~/.cloudflared/www1.yml
+url: http://localhost:3000
+tunnel: <tunnel id>
+credentials-file: /root/.cloudflared/<tunnel id>.json
+$ ./cloudflared-linux-arm64 tunnel --config ~/.cloudflared/www1.yml run
+$ wget https://github.com/xyproto/algernon/releases/download/1.12.14/algernon-1.12.14-linux_arm64.tar.xz
+$ tar xf algernon-1.12.14-linux_arm64.tar.xz
+$ ./algernon-1.12.14-linux_arm64/algernon
+```
+now you can visit https://www1.gvgle.com  from you browser, it serves from algernon web server in termux os
+
 ## _Steps For First Time Use (Recommended)_
 1. Update Alpine
 `apk update`
