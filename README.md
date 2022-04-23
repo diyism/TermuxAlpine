@@ -80,8 +80,8 @@ termux-setup-storage
 ls storage
 ls /sdcard
 
-termux-backup /sdcard/termux.pkgs.tar.xz
-#termux-restore /sdcard/termux.pkgs.tar.xz
+termux-backup /sdcard/termux-backup.pkgs.tar.xz
+#termux-restore /sdcard/termux-backup.pkgs.tar.xz
 ```
 
 ## cloudflared tunnel:
