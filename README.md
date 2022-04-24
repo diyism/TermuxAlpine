@@ -86,14 +86,19 @@ termux-backup /sdcard/termux-backup.pkgs.tar.xz
 
 ## cloudflared tunnel:
 ```
-$ pkg install golang git libcurl debianutils make
+$ pkg install golang git libcurl debianutils make           #libcurl need be upgraded, or else git show error "library "libssl.so.1.1" not found"
+$ git clone --depth=1 https://github.com/cloudflare/cloudflared.git
+$ cd cloudflared
+$ sed -i 's/linux/android/g' Makefile
+$ make cloudflared
+$ install cloudflared /data/data/com.termux/files/usr/bin/
 
+# wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64
+# don't use cloudflared-linux-arm64, will happen error to use /etc/resolv.conf which doesn't exist in android
 
-$ wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64
-$ chmod 777 cloudflared-linux-arm64
-$ ./cloudflared-linux-arm64 tunnel login             #it will auto open android browser from termux
-$ ./cloudflared-linux-arm64 tunnel create www1
-$ ./cloudflared-linux-arm64 tunnel route dns www1 www1.gvgle.com
+$ cloudflared tunnel login             #it will auto open android browser from termux
+$ cloudflared tunnel create www1
+$ cloudflared tunnel route dns www1 www1.gvgle.com
 $ nano ~/.cloudflared/www1.yml
 url: http://localhost:3000
 tunnel: <tunnel id>
