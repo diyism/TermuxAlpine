@@ -106,7 +106,7 @@ $ cloudflared tunnel route dns www1 www1.gvgle.com
 $ nano ~/.cloudflared/www1.yml
 url: http://localhost:3000
 tunnel: <tunnel id>
-credentials-file: /root/.cloudflared/<tunnel id>.json
+credentials-file: /data/data/com.termux/files/home/.cloudflared/<tunnel id>.json
 $ ./cloudflared-linux-arm64 tunnel --config ~/.cloudflared/www1.yml run
 $ wget https://github.com/xyproto/algernon/releases/download/1.12.14/algernon-1.12.14-linux_arm64.tar.xz
 $ tar xf algernon-1.12.14-linux_arm64.tar.xz
