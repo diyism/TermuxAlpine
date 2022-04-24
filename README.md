@@ -87,16 +87,16 @@ termux-backup /sdcard/termux-backup.pkgs.tar.xz
 ## cloudflared tunnel:
 ```
 #we need compile cloudflared by ourselve
-$ pkg install golang git libcurl debianutils make
+// pkg install golang git libcurl debianutils make
 #libcurl need be upgraded, or else git show error "library "libssl.so.1.1" not found"
-$ git clone --depth=1 https://github.com/cloudflare/cloudflared.git
-$ cd cloudflared
-$ sed -i 's/linux/android/g' Makefile
-$ make cloudflared
-$ install cloudflared /data/data/com.termux/files/usr/bin/
+// git clone --depth=1 https://github.com/cloudflare/cloudflared.git
+// cd cloudflared
+// sed -i 's/linux/android/g' Makefile
+// make cloudflared
+// install cloudflared /data/data/com.termux/files/usr/bin/
 
 # don't use cloudflared-linux-arm64, will happen error to use /etc/resolv.conf which doesn't exist in android
-# wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64
+// wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64
 
 $ wget https://github.com/diyism/TermuxXserver/releases/download/test/termux-cloudflared
 $ install termux-cloudflared /data/data/com.termux/files/usr/bin/cloudflared
@@ -107,7 +107,8 @@ $ nano ~/.cloudflared/www1.yml
 url: http://localhost:3000
 tunnel: <tunnel id>
 credentials-file: /data/data/com.termux/files/home/.cloudflared/<tunnel id>.json
-$ ./cloudflared-linux-arm64 tunnel --config ~/.cloudflared/www1.yml run
+$ cloudflared tunnel --config ~/.cloudflared/www1.yml run
+
 $ wget https://github.com/xyproto/algernon/releases/download/1.12.14/algernon-1.12.14-linux_arm64.tar.xz
 $ tar xf algernon-1.12.14-linux_arm64.tar.xz
 $ ./algernon-1.12.14-linux_arm64/algernon
