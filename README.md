@@ -86,6 +86,9 @@ termux-backup /sdcard/termux-backup.pkgs.tar.xz
 
 ## cloudflared tunnel:
 ```
+$ pkg install golang git libssh2 debianutils make
+
+
 $ wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64
 $ chmod 777 cloudflared-linux-arm64
 $ ./cloudflared-linux-arm64 tunnel login             #it will auto open android browser from termux
