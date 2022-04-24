@@ -108,7 +108,7 @@ url: http://localhost:3000
 tunnel: <tunnel id>
 credentials-file: /data/data/com.termux/files/home/.cloudflared/<tunnel id>.json
 $ echo 'nameserver 8.8.4.4' >/data/data/com.termux/files/usr/etc/resolv.conf
-#it's werid, "cloudflared tunnel login" won't use resolv.conf, but "cloudflared tunnel run" will use resolv.conf
+#it's weird, "cloudflared tunnel login" won't use resolv.conf, but "cloudflared tunnel run" will use resolv.conf
 $ cloudflared tunnel --config ~/.cloudflared/www1.yml run
 
 $ wget https://github.com/xyproto/algernon/releases/download/1.12.14/algernon-1.12.14-linux_arm64.tar.xz
