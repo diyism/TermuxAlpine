@@ -98,7 +98,7 @@ $ install cloudflared /data/data/com.termux/files/usr/bin/
 # don't use cloudflared-linux-arm64, will happen error to use /etc/resolv.conf which doesn't exist in android
 # wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64
 
-$ wget https://raw.githubusercontent.com/diyism/TermuxXserver/master/termux-cloudflared
+$ wget https://github.com/diyism/TermuxXserver/releases/download/test/termux-cloudflared
 $ install termux-cloudflared /data/data/com.termux/files/usr/bin/cloudflared
 $ cloudflared tunnel login             #it will auto open android browser from termux
 $ cloudflared tunnel create www1
