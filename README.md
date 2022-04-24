@@ -86,7 +86,7 @@ termux-backup /sdcard/termux-backup.pkgs.tar.xz
 
 ## cloudflared tunnel:
 ```
-$ pkg install golang git libssh2 debianutils make
+$ pkg install golang git libcurl debianutils make
 
 
 $ wget https://github.com/cloudflare/cloudflared/releases/download/2022.4.1/cloudflared-linux-arm64
