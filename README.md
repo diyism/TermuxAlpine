@@ -86,7 +86,8 @@ termux-backup /sdcard/termux-backup.pkgs.tar.xz
 
 ## cloudflared tunnel:
 ```
-$ pkg install golang git libcurl debianutils make           #libcurl need be upgraded, or else git show error "library "libssl.so.1.1" not found"
+$ pkg install golang git libcurl debianutils make
+#libcurl need be upgraded, or else git show error "library "libssl.so.1.1" not found"
 $ git clone --depth=1 https://github.com/cloudflare/cloudflared.git
 $ cd cloudflared
 $ sed -i 's/linux/android/g' Makefile
